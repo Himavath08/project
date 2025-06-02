@@ -91,7 +91,7 @@ image_path = 'C:/Users/admin/Pictures/Screenshots/Screenshot 2025-05-20 231731.p
 detect_handwriting(image_path)
 ```
 ## III)Perform object detection with label in an image:
-``
+```
 config_file='ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'
 frozen_model='frozen_inference_graph.pb'
 
@@ -119,7 +119,7 @@ for ClassInd,conf,boxes in zip(ClassIndex.flatten(),confidence.flatten(),bbox):
     cv2.rectangle(img,boxes,(0,0,255),2)
     cv2.putText(img,classLabels[ClassInd-1],(boxes[0]+10,boxes[1]+40),font,fontScale=font_scale,color=(255,0,0),thickness=1)
 plt.imshow(cv2.cvtColor(img,cv2.COLOR_BGR2RGB))
-``
+```
 # OUTPUT:
 # I)Perform ROI from an image:
 ![image](https://github.com/user-attachments/assets/beb1542a-1d3f-42cb-9f6d-1b712929106d)
